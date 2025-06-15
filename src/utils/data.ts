@@ -1,5 +1,5 @@
 // 인포 - info
-export const info = {
+export const mainInfo = {
   groom: {
     nameKo: "김지훈",
     nameEn: "Kim Jihoon",
@@ -88,10 +88,30 @@ export const gallery = [
 
 // 계좌번호 - accounts
 export const accounts = [
-  { type: "groom", name: "김지훈", account: "국민 0123-45-6789101" },
-  { type: "groom", name: "김동해", account: "국민 0123-45-123123" },
-  { type: "groom", name: "이향란", account: "국민 0123-45-6789101" },
-  { type: "bride", name: "김아람", account: "국민 0123-45-6789101" },
-  { type: "bride", name: "김종태", account: "국민 0123-45-123123" },
-  { type: "bride", name: "최미숙", account: "국민 0123-45-6789101" },
+  { type: "groom", label: "", name: "김지훈", account: "국민 0123-45-6789101" },
+  {
+    type: "groom",
+    label: "父",
+    name: "김동해",
+    account: "국민 0123-45-123123",
+  },
+  {
+    type: "groom",
+    label: "母",
+    name: "이향란",
+    account: "국민 0123-45-6789101",
+  },
+  { type: "bride", label: "", name: "김아람", account: "국민 0123-45-6789101" },
+  {
+    type: "bride",
+    label: "父",
+    name: "김종태",
+    account: "국민 0123-45-123123",
+  },
+  {
+    type: "bride",
+    label: "母",
+    name: "최미숙",
+    account: "국민 0123-45-6789101",
+  },
 ];

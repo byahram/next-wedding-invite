@@ -53,6 +53,7 @@ export type Gallery = string[];
 // 계좌번호 - accounts
 export type Account = {
   type: string;
+  label: string;
   name: string;
   account: string;
 };
