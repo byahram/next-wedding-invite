@@ -29,7 +29,7 @@ export default function AccountSection({ acc }: IAccount) {
   return (
     <section
       id="account"
-      className="relative w-full max-w-xl mx-auto overflow-hidden pt-20 pb-10 bg-[var(--background2)]"
+      className="relative w-full mx-auto overflow-hidden pt-20 pb-10 bg-[var(--background2)]"
     >
       <CurvedBackground color={"var(--background)"} />
 

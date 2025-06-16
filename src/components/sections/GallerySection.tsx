@@ -27,7 +27,7 @@ export default function GallerySection({ img }: GalleryProps) {
   return (
     <section
       id="gallery"
-      className="relative w-full max-w-xl mx-auto overflow-hidden pt-20 pb-10"
+      className="relative w-full mx-auto overflow-hidden pt-20 pb-10"
     >
       <div className="relative flex-col justify-center items-center text-center">
         <SectionTitle title="Gallery" />

@@ -14,10 +14,10 @@ export default function CalendarSection({ info }: IMainInfo) {
   return (
     <section
       id="calendar"
-      className="relative w-full max-w-xl mx-auto overflow-hidden pt-20 pb-10 px-10"
+      className="relative w-full mx-auto overflow-hidden pt-20 pb-10 px-10"
     >
       <div className="relative flex-col justify-center items-center text-center">
-        <p className="text-xl mt-2 font-light font-parisienne flex text-left ml-3 whitespace-pre-line">
+        <p className="text-xl mt-2 font-light [var(--font-parisienne)] flex text-left ml-3 whitespace-pre-line">
           {info.wedding.txt}
         </p>
 

@@ -13,7 +13,7 @@ export default function ClosingSection({ info }: IMainInfo) {
   return (
     <section
       id="closing"
-      className="relative w-full max-w-xl mx-auto overflow-hidden"
+      className="relative w-full mx-auto overflow-hidden"
     >
       <div className="flex flex-col items-center text-center">
         <img src={info.images.sub2} alt="" className="w-full object-cover" />

@@ -18,7 +18,7 @@ export default function IntroductionSection({ info, contacts }: IIntroduction) {
   return (
     <section
       id="invitation"
-      className="relative w-full max-w-xl mx-auto overflow-hidden pt-20 pb-10 bg-[var(--background2)]"
+      className="relative w-full mx-auto overflow-hidden pt-20 pb-10 bg-[var(--background2)]"
     >
       <CurvedBackground color={"var(--background)"} />
 
