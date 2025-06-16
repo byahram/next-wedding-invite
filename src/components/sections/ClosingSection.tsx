@@ -1,8 +1,8 @@
 import React from "react";
-import { IMainInfo } from "@/utils/types";
+import { IWeddingInfo } from "@/utils/types";
 // import dayjs from "dayjs";
 
-export default function ClosingSection({ info }: IMainInfo) {
+export default function ClosingSection({ info }: IWeddingInfo) {
   //   const weddingDate = dayjs(info.wedding.date);
   //   const today = dayjs();
   //   const diff = weddingDate.diff(today, "day");
@@ -11,10 +11,7 @@ export default function ClosingSection({ info }: IMainInfo) {
   //     diff === 0 ? "D-day" : diff > 0 ? `D - ${diff}` : `D + ${Math.abs(diff)}`;
 
   return (
-    <section
-      id="closing"
-      className="relative w-full mx-auto overflow-hidden"
-    >
+    <section id="closing" className="relative w-full mx-auto overflow-hidden">
       <div className="flex flex-col items-center text-center">
         <img src={info.images.sub2} alt="" className="w-full object-cover" />
         {/* <div className="absolute bottom-20 text-white text-xl font-semibold drop-shadow-md">

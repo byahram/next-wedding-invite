@@ -1,6 +1,6 @@
 "use client";
 
-import { Contact, MainInfo } from "@/utils/types";
+import { Participants, WeddingInfo } from "@/utils/types";
 import React, { useState } from "react";
 import CurvedBackground from "../layout/CurvedBackground";
 import SectionTitle from "../common/SectionTitle";
@@ -8,8 +8,8 @@ import { Button } from "../common/Buttons";
 import ContactPopup from "../popup/ContactPopup";
 
 interface IIntroduction {
-  info: MainInfo;
-  contacts: Contact[];
+  info: WeddingInfo;
+  contacts: Participants[];
 }
 
 export default function IntroductionSection({ info, contacts }: IIntroduction) {
@@ -45,16 +45,16 @@ export default function IntroductionSection({ info, contacts }: IIntroduction) {
 
         <div className="relative pt-8 flex flex-col items-center text-center space-y-2">
           <div className="flex items-center space-x-2">
-            <span className="font-semibold">{info.groom.groomFather}</span>
+            <span className="font-semibold">{info.groom.father}</span>
             <span>·</span>
-            <span className="font-semibold">{info.groom.groomMother}</span>
+            <span className="font-semibold">{info.groom.mother}</span>
             <span>의 아들</span>
             <span className="font-bold">{info.groom.nameKo}</span>
           </div>
           <div className="flex items-center space-x-2">
-            <span className="font-semibold">{info.bride.brideFather}</span>
+            <span className="font-semibold">{info.bride.father}</span>
             <span>·</span>
-            <span className="font-semibold">{info.bride.brideMother}</span>
+            <span className="font-semibold">{info.bride.mother}</span>
             <span>의 딸</span>
             <span className="font-bold">{info.bride.nameKo}</span>
           </div>

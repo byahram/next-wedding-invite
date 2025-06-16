@@ -1,14 +1,11 @@
-import { IMainInfo } from "@/utils/types";
+import { IWeddingInfo } from "@/utils/types";
 import { formatDate } from "@/utils/utils";
 import Image from "next/image";
 import React from "react";
 
-export default function MainCoverSection({ info }: IMainInfo) {
+export default function MainCoverSection({ info }: IWeddingInfo) {
   return (
-    <section
-      id="main"
-      className="relative w-full mx-auto overflow-hidden"
-    >
+    <section id="main" className="relative w-full mx-auto overflow-hidden">
       <div className="relative">
         {/* <div className="relative aspect-[3/4] w-full"> */}
         <div className="relative h-[77vh] w-full">
@@ -50,13 +47,7 @@ export default function MainCoverSection({ info }: IMainInfo) {
             {info.bride.nameKo.slice(1)}
           </span>
         </div>
-        <p>
-          {formatDate(info.wedding.date) +
-            " " +
-            info.wedding.day +
-            " " +
-            info.wedding.time}
-        </p>
+        <p>{formatDate(info.wedding.dateAndTime)}</p>
         <p>{info.wedding.location}</p>
       </div>
     </section>

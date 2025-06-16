@@ -1,14 +1,21 @@
+"use client";
+
 import React from "react";
-import { IMainInfo } from "@/utils/types";
+import { IWeddingInfo } from "@/utils/types";
 import CountdownTimer from "../common/CountdownTimer";
 
 const getDaysInMonth = (month: string, year: string): number => {
   return new Date(parseInt(year), parseInt(month), 0).getDate(); // 윤년 반영
 };
 
-export default function CalendarSection({ info }: IMainInfo) {
+export default function CalendarSection({ info }: IWeddingInfo) {
   const weekdays = ["일", "월", "화", "수", "목", "금", "토"];
-  const [year, month, day] = info.wedding.date.split("-");
+  const [year, month, day] = info.wedding.dateAndTime.split(" ")[0].split("-");
+  const [hour, minute] = info.wedding.dateAndTime.split(" ")[1].split(":");
+
+  const period = parseInt(hour) < 12 ? "오전" : "오후";
+  const formattedHour = parseInt(hour) % 12 || 12;
+
   const daysInMonth = getDaysInMonth(month, year);
 
   return (
@@ -54,7 +61,7 @@ export default function CalendarSection({ info }: IMainInfo) {
                         {dayNum}
                       </div>
                       <span className="absolute -bottom-5 w-20 -left-4 text-[10px] text-gray-500 mt-1">
-                        {info.wedding.time}
+                        {period} {formattedHour}시 {minute}분
                       </span>
                     </>
                   ) : (
@@ -69,7 +76,7 @@ export default function CalendarSection({ info }: IMainInfo) {
         </div>
 
         <CountdownTimer
-          targetDate={info.wedding.date}
+          dateAndTime={info.wedding.dateAndTime}
           groomName={info.groom.nameKo}
           brideName={info.bride.nameKo}
         />

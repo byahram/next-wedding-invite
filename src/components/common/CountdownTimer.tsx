@@ -1,15 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type CountdownTimerProps = {
-  targetDate: string;
+  dateAndTime: string;
   groomName: string;
   brideName: string;
 };
 
 export default function CountdownTimer({
-  targetDate,
+  dateAndTime,
   groomName,
   brideName,
 }: CountdownTimerProps) {
@@ -23,11 +23,14 @@ export default function CountdownTimer({
   const formattedGroomName = groomName.slice(1);
   const formattedBrideName = brideName.slice(1);
 
+  const [date, time] = useMemo(() => dateAndTime.split(" "), [dateAndTime]);
+
+  const combinedDate = useMemo(() => new Date(`${date} ${time}`), [date, time]);
+
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date();
-      const target = new Date(targetDate);
-      const difference = target.getTime() - now.getTime();
+      const difference = combinedDate.getTime() - now.getTime();
 
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -42,10 +45,10 @@ export default function CountdownTimer({
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, [combinedDate]);
 
   return (
-    <section className="w-full max-w-md px-4 pt-10 text-center">
+    <div className="w-full max-w-md px-4 pt-10 text-center">
       <div className="flex justify-center space-x-2 mb-6">
         <TimeBox value={timeLeft.days} label="Days" />
         <span className="flex items-center">:</span>
@@ -66,7 +69,7 @@ export default function CountdownTimer({
         </span>
         일 남았습니다.
       </p>
-    </section>
+    </div>
   );
 }
 

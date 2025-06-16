@@ -1,16 +1,16 @@
 // 인포 - info
-export type MainInfo = {
+export type WeddingInfo = {
   groom: {
     nameKo: string;
     nameEn: string;
-    groomFather: string;
-    groomMother: string;
+    father: string;
+    mother: string;
   };
   bride: {
     nameKo: string;
     nameEn: string;
-    brideFather: string;
-    brideMother: string;
+    father: string;
+    mother: string;
   };
   images: {
     main: string;
@@ -18,12 +18,13 @@ export type MainInfo = {
     sub2: string;
   };
   wedding: {
-    date: string;
+    dateAndTime: string;
     day: string;
-    time: string;
     txt: string;
     location: string;
     address: string;
+    lat: number;
+    lng: number;
     numOfBlank: string;
   };
   message: {
@@ -32,32 +33,23 @@ export type MainInfo = {
   };
 };
 
-export interface IMainInfo {
-  info: MainInfo;
+export interface IWeddingInfo {
+  info: WeddingInfo;
 }
 
-// 연락처 - contacts
-export type Contact = {
+// 양가 가족 - participants
+export type Participants = {
+  type: string;
   role: string;
   name: string;
   phone: string;
+  account: string;
+  label: string;
 };
 
-export interface IContact {
-  contact: Contact[];
+export interface IParticipants {
+  parts: Participants[];
 }
 
 // 갤러리 - gallery
 export type Gallery = string[];
-
-// 계좌번호 - accounts
-export type Account = {
-  type: string;
-  label: string;
-  name: string;
-  account: string;
-};
-
-export interface IAccount {
-  acc: Account[];
-}

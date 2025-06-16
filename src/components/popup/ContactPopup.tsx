@@ -3,10 +3,10 @@
 import React from "react";
 import { Button } from "../common/Buttons";
 import { PopupContainer } from "./PopupContainer";
-import { Contact } from "@/utils/types";
+import { Participants } from "@/utils/types";
 
 type ContactPopupProps = {
-  contacts: Contact[];
+  contacts: Participants[];
   onClose: () => void;
 };
 

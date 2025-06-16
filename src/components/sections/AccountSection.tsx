@@ -1,4 +1,4 @@
-import { IAccount } from "@/utils/types";
+import { IParticipants } from "@/utils/types";
 import React, { useState } from "react";
 import { Button } from "../common/Buttons";
 import { MdContentCopy } from "react-icons/md";
@@ -6,7 +6,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import CurvedBackground from "../layout/CurvedBackground";
 import SectionTitle from "../common/SectionTitle";
 
-export default function AccountSection({ acc }: IAccount) {
+export default function AccountSection({ parts }: IParticipants) {
   const [isOpenGroom, setIsOpenGroom] = useState(false);
   const [isOpenBride, setIsOpenBride] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
@@ -67,7 +67,7 @@ export default function AccountSection({ acc }: IAccount) {
             >
               {isOpenGroom && (
                 <div className="flex flex-col gap-8 py-4 px-6 border-t border-neutral-300">
-                  {acc
+                  {parts
                     .filter((account) => account.type === "groom")
                     .map((account, index) => (
                       <div
@@ -120,7 +120,7 @@ export default function AccountSection({ acc }: IAccount) {
             >
               {isOpenBride && (
                 <div className="flex flex-col gap-8 py-4 px-6 border-t border-neutral-300">
-                  {acc
+                  {parts
                     .filter((account) => account.type === "bride")
                     .map((account, index) => (
                       <div
