@@ -1,27 +1,42 @@
 "use client";
 
-import React from "react";
-import Footer from "../layout/Footer";
+import React, { useState } from "react";
 import { accounts, contacts, gallery, mainInfo } from "@/utils/data";
-import FloatingButtons from "../layout/FloatingButtons";
-import ClosingSection from "../sections/ClosingSection";
-import AccountSection from "../sections/AccountSection";
-import GallerySection from "../sections/GallerySection";
-import CalendarSection from "../sections/CalendarSection";
+import MainCoverSection from "../sections/MainCoverSection";
 import IntroductionSection from "../sections/IntroductionSection";
+import CalendarSection from "../sections/CalendarSection";
+import GallerySection from "../sections/GallerySection";
+// import LocationSection from "../sections/LocationSection";
+import AccountSection from "../sections/AccountSection";
+// import RsvpSection from "../sections/RsvpSection";
+import ClosingSection from "../sections/ClosingSection";
+import Footer from "../layout/Footer";
+import FloatingButtons from "../layout/FloatingButtons";
 
 export default function InvitationPage() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [isLoaded, setIsLoaded] = useState(true);
+
   return (
     <>
-      <main className="relative flex flex-col max-w-md w-full min-h-[100vh] mx-auto bg-background items-center">
-        <IntroductionSection contacts={contacts} info={mainInfo} />
-        <CalendarSection info={mainInfo} />
-        <GallerySection img={gallery} />
-        <AccountSection acc={accounts} />
-        <ClosingSection info={mainInfo} />
-      </main>
-      <Footer msg={mainInfo.message.footer} />
-      <FloatingButtons />
+      {/* {!isLoaded && <LoadingScreen onFinish={() => setIsLoaded(true)} />} */}
+      {!isLoaded && <div>Loading</div>}
+      {isLoaded && (
+        <>
+          <main className="relative flex flex-col max-w-md w-full min-h-[100vh] mx-auto bg-background items-center">
+            <MainCoverSection info={mainInfo} />
+            <IntroductionSection contacts={contacts} info={mainInfo} />
+            <CalendarSection info={mainInfo} />
+            <GallerySection img={gallery} />
+            {/* <LocationSection info={mainInfo} /> */}
+            <AccountSection acc={accounts} />
+            {/* <RsvpSection info={mainInfo} /> */}
+            <ClosingSection info={mainInfo} />
+          </main>
+          <Footer msg={mainInfo.message.footer} />
+          <FloatingButtons />
+        </>
+      )}
     </>
   );
 }
