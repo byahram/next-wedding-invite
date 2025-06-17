@@ -23,6 +23,7 @@ export type WeddingInfo = {
     txt: string;
     location: string;
     address: string;
+    call: string;
     lat: number;
     lng: number;
     numOfBlank: string;
@@ -36,6 +37,12 @@ export type WeddingInfo = {
 export interface IWeddingInfo {
   info: WeddingInfo;
 }
+
+// transportation
+export type Transportation = {
+  title: string;
+  details: string[];
+};
 
 // 양가 가족 - participants
 export type Participants = {

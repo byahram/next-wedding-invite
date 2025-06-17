@@ -1,14 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
-import { gallery, participants, weddingInfo } from "@/utils/data";
+import {
+  gallery,
+  participants,
+  transportation,
+  weddingInfo,
+} from "@/utils/data";
 import MainCoverSection from "../sections/MainCoverSection";
 import IntroductionSection from "../sections/IntroductionSection";
 import CalendarSection from "../sections/CalendarSection";
 import GallerySection from "../sections/GallerySection";
-// import LocationSection from "../sections/LocationSection";
+import LocationSection from "../sections/LocationSection";
 import AccountSection from "../sections/AccountSection";
-import RsvpSection from "../sections/RsvpSection";
+// import RsvpSection from "../sections/RsvpSection";
 import ClosingSection from "../sections/ClosingSection";
 import Footer from "../layout/Footer";
 import FloatingButtons from "../layout/FloatingButtons";
@@ -28,9 +33,9 @@ export default function InvitationPage() {
             <IntroductionSection contacts={participants} info={weddingInfo} />
             <CalendarSection info={weddingInfo} />
             <GallerySection img={gallery} />
-            {/* <LocationSection info={mainInfo} /> */}
+            <LocationSection info={weddingInfo} trans={transportation} />
             <AccountSection parts={participants} />
-            <RsvpSection info={weddingInfo} />
+            {/* <RsvpSection info={weddingInfo} /> */}
             <ClosingSection info={weddingInfo} />
           </main>
           <Footer msg={weddingInfo.message.footer} />

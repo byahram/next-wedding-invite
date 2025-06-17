@@ -21,10 +21,11 @@ const buttonVariants = cva(
         slider_icon: "absolute text-foreground z-10 cursor-pointer shadow-none",
         gallery_more:
           "bg-white/60 backdrop-blur-sm text-gray-600 border border-gray-200 hover:bg-white hover:shadow-lg transition rounded-full text-sm px-6 py-2",
+        only_icon: "shadow-none text-gray-700",
       },
       size: {
         default: "px-10 py-3",
-        floating: "w-12 h-12",
+        floating: "w-16 h-16",
         icon: "px-2 py-1",
         icon_text: "px-2 py-2",
         account: "py-3 px-6",
