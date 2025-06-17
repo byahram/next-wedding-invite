@@ -43,6 +43,10 @@ export default function AccountSection({ parts }: IParticipants) {
           좋은 부부의 모습으로 보답하겠습니다.
         </p>
 
+        <p className="mt-4 text-sm text-gray-600 italic">
+          ※ 화환은 정중히 사양하겠습니다.
+        </p>
+
         <div className="mt-8 px-8 w-full flex flex-col gap-4">
           <div className="w-full bg-white rounded-lg shadow-md">
             <Button
