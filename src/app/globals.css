@@ -10,8 +10,8 @@
   --primary: #ef4444;
   --secondary: #3b82f6;
   --title1: #d1b7a1;
-  --countBox: #f9f9f9;
-  --countTxt: #9b7f75;
+  --countBox: #fafafa;
+  --countTxt: #555555;
 }
 
 @theme inline {

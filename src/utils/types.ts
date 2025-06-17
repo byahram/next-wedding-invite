@@ -31,6 +31,7 @@ export type WeddingInfo = {
   message: {
     footer: string;
     quote: string;
+    closing: string;
   };
 };
 

@@ -25,9 +25,8 @@ export default function IntroductionSection({ info, contacts }: IIntroduction) {
       <div className="relative flex-col justify-center items-center text-center">
         <SectionTitle title="Invite you" />
         <div className="leading-8">
-          저희 두 사람이 <br />
-          평생을 함께하기 위해 <br />
-          서로의 반려자가 되려 합니다.
+          서로의 손을 잡고 <br />
+          평생을 함께 걸어가기로 했습니다. <br />
           <br /> <br />그 진실한 서약을 하는 자리에 <br />
           소중한 분들을 모십니다.
           <br /> <br />

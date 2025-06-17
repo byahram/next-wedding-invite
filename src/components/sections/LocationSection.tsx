@@ -73,7 +73,7 @@ export default function LocationSection({
               <IoCallOutline size={14} />
             </Button>
           </p>
-          <p className="mb-4 font-medium flex gap-2">
+          <p className="mb-4 font-medium flex gap-2 justify-center">
             {info.wedding.address}
             <Button
               className="p-1"
